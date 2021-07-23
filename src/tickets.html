@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Summer Music Festival | Inicio</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <h1>Summer Music Festival 2021 <i class="fas fa-sun"></i></h1>
+          <h2>Del 25 al 27 de junio</h2>
+        </div>
+        <nav class="menu">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html">Inicio</a></li>
+            <li class="list-inline-item"><a href="about.html">Sobre SMF</a></li>
+            <li class="list-inline-item"><a href="schedule.html">Calendario</a></li>
+            <li class="list-inline-item"><a href="tickets.html">Entradas</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main role="main" class="tickets">
+          <h1>Consigue tus entradas antes de que se agoten</h1>
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="col-md-4">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" required>
+            </div>
+            <div class="col-md-4">
+                <label for="cumple"class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="cumple" required>
+            </div>
+            <div class="col-md-6">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" required>
+            </div>
+            <div class="col-md-6">
+                <label for="correoConfirm" class="form-label">Confirma correo electrónico</label>
+                <input type="email" class="form-control" id="correoConfirm" required>
+            </div>
+            <div class="col-md-4">
+                <label for="numEntradas" class="form-label">Número de entradas</label>
+                <select id="numEntradas" class="form-select">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </div>
+            <div class="col-md-8">
+                <p>Selecciona qué días quieres asistir:</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Viernes, 25 de junio</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Sábado, 26 de junio</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Domingo, 27 de junio</label>
+                  </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="aceptar" required>
+                    <label class="form-check-label" for="aceptar">Acepto los términos y coindiciones</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-danger">Comprar entradas</button>
+              </div>
+        </form>
+      </main>
+    </div>
+    <footer class="text-center">
+      <p><strong>Estudiante: Dorothy J. Casugo Benito / PEC 3: Desarrollo de un sitio web / Asignatura: Herramientas avanzadas de HTML y CSS / Máster en Aplicaciones Multimedia </strong></p>
+      <p>Esta página se ha desarrollado a partir del repositorio facilitado por la universidad: <a href="https://github.com/uoc-advanced-html-css/uoc-boilerplate" target="_blank">UOC Boilerplate</a>. </p>
+    </footer>
+    <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

@@ -1,0 +1,93 @@
+body {
+    background: url("../../assets/images/playa-verano-smf.jpg") no-repeat;
+    background-size: cover;
+
+    a {
+        color: $second-color;
+    }
+
+    a:hover {
+        color: $hover-second-color;
+    }
+}
+
+.container {
+    margin: 0 auto;
+
+    header {
+        margin: 50px auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .logo {
+            h2 { 
+                text-transform: uppercase; 
+                font-size: 16px;
+                color: $main-color;
+            }
+
+            a {
+                color: initial;
+                text-decoration: none;
+            }
+        }
+
+        i {
+            color: $second-color;
+        }
+
+        .menu {
+            a {
+                font-size: x-large;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            li {
+                padding: 0 5px;
+                margin: 0 15px;
+            }
+            
+            li:hover {
+                border-bottom: 4px solid rgba($main-color, 0.2);
+            }
+        }
+    }
+
+    main {
+       margin: 50px auto; 
+    }
+
+    @media only screen and (max-width: 992px) {
+        header {
+            .logo {
+                border-bottom: 2px solid $second-color;
+                padding: 15px;
+                h1 { font-size: 40px;}
+            }
+            .menu {
+                border-bottom: 2px solid $second-color;
+                padding: 15px 0;
+                li {
+                    width: 95%;
+                    margin: 5px;
+                    a { font-size: 20px; }
+                }
+
+                li:hover { border-bottom: none;}
+            }
+    
+        }
+    }
+}
+
+footer {
+    padding: 10px 0;
+    font-size: small;
+    color: white;
+    background-color: rgba($main-color, 0.45);
+    p {
+        margin: 5px;
+    }
+}

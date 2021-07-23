@@ -1,0 +1,100 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+
+  .fecha-lugar {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    .dias {
+      padding: 15px;
+      h3 {
+      color: $main-color;
+      font-size: xx-large;
+      font-weight: bold;}
+    }
+    h4 { 
+      padding: 15px;
+      color: $second-color; 
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .intro { 
+    font-size: 30px;
+    margin: 30px;
+    padding: 15px 25px;
+    border-left: 3px solid $main-color;
+    background-color: rgba($bg-color, 0.7);
+  }
+
+  .attention-box {
+    width: 45%;
+    padding: 15px;
+    margin: 30px;
+    color: $second-color;
+    border-top: 3px solid $second-color;
+    background-color: $bg-color-opacity;
+
+   a { margin: 10px 0;}
+  }
+  .decoration-text {
+    margin: 30px;
+
+    h4 { 
+      font-size: 60px; 
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .summer-1 { color: $main-color; }
+    .summer-2 { color: $second-color; }
+    .summer-3 { color: $fourth-color; }
+
+    @supports (-webkit-text-stroke-width: 1px) and (-webkit-text-fill-color: transparent) {
+      h4 {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .summer-1 { -webkit-text-stroke-color: $main-color; }
+      .summer-2 { -webkit-text-stroke-color: $second-color; }
+      .summer-3 { -webkit-text-stroke-color: $fourth-color; }
+    }
+  }
+}
+
+@supports (display: grid) {
+  .home {
+    display: grid;
+    grid-template-rows: repeat(4, 250px);
+    grid-template-columns: repeat(5, 1fr);
+
+    .fecha-lugar {
+      grid-row: 1;
+      grid-column: 1/4;
+
+      .dias { border-right: 5px solid $fourth-color;  }
+    }
+
+    .intro {
+      grid-row: 3;
+      grid-column: 2/4;
+      height: 150px;
+    }
+  
+    .attention-box {
+      width: auto;
+      grid-row: 2;
+      grid-column: 4/6;
+    }
+  
+    .decoration-text {
+      grid-row: 4/6;
+      grid-column: 4/6;
+    }
+  }
+}
